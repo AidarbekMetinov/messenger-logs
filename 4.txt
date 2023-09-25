@@ -1,0 +1,71 @@
+
+22.09.2023 11:46:55.635 [orach-router] DEBUG ru.bpc.orach.messagebus.QueuedBus - Routing message [id=2666149]
+22.09.2023 11:46:55.640 [orach-router] DEBUG ru.bpc.orach.messagebus.QueuedBus - Route targets for message [id=2666149] are [Module: [moduleType = 200, moduleId = SMS, status = online]]
+22.09.2023 11:46:55.640 [orach-router] DEBUG ru.bpc.orach.messagebus.QueuedBus - Routing message [id=2666149] to the processor: Module: [moduleType = 200, moduleId = SMS, status = online]
+22.09.2023 11:46:55.640 [orach-router] DEBUG r.b.s.modules.smslib.SmslibModule - Processing outgoing message with internal id: 2666063, phone: 996509308300, text:
+22.09.23 11:46 s kartoy ***4682 YANDEX GO, KG bila provedena operaciya na summu 167.00 KGS. Balans 5459.78 KGS.
+, id: 2666149
+22.09.2023 11:46:55.640 [orach-router] DEBUG r.b.s.m.s.MessageReDeliveryService - Skip scheduling message with id = '1' for re-delivery, because maxAttempts = {}
+22.09.2023 11:46:55.640 [orach-router] DEBUG org.smslib - GTW: smpp: Size of queue 0
+22.09.2023 11:46:55.663 [pool-10-thread-1] DEBUG org.smslib - GTW: smpp: Sending message 2666149
+2023-09-22 11:46:55,663 [pool-10-thread-1] INFO  smppgateway - Message from :  not set to source address, set to address : KKB
+22.09.2023 11:46:55.663 [pool-10-thread-1] TRACE org.jsmpp.DefaultPDUSender - Sending PDU:
+00000000 00 00 00 9F 00 00 00 04 00 00 00 00 00 01 0A 04
+00000010 00 01 01 4B 4B 42 00 01 01 39 39 36 35 30 39 33
+00000020 30 38 33 30 30 00 00 00 01 00 00 01 00 00 00 6F
+00000030 32 32 2E 30 39 2E 32 33 20 31 31 3A 34 36 20 73
+00000040 20 6B 61 72 74 6F 79 20 2A 2A 2A 34 36 38 32 20
+00000050 59 41 4E 44 45 58 20 47 4F 2C 20 4B 47 20 62 69
+00000060 6C 61 20 70 72 6F 76 65 64 65 6E 61 20 6F 70 65
+00000070 72 61 63 69 79 61 20 6E 61 20 73 75 6D 6D 75 20
+00000080 31 36 37 2E 30 30 20 4B 47 53 2E 20 42 61 6C 61
+00000090 6E 73 20 35 34 35 39 2E 37 38 20 4B 47 53 2E   
+
+22.09.2023 11:46:55.663 [pool-10-thread-1] DEBUG org.jsmpp.session.AbstractSession - Command submit_sm sent... with sequence number 68100
+2023-09-22 11:46:55,663 [pool-10-thread-1] INFO  smppgateway - Message submitted, with source addres:KKB and destination addres:996509308300 and message Id is :68100 and seq. number is: 68100 by gateway smpp
+22.09.2023 11:46:55.664 [Thread-20] DEBUG r.b.s.m.s.OutboundMessageNotificationHandler - Status received from provider for message [id=2666149] is PROCESS
+22.09.2023 11:46:55.737 [Thread-831] TRACE org.jsmpp.session.SMPPSession - Read PDU from input stream: PDUHeader(25, 80000004, 00000000, 68100). Submitting PDUProcessTask to executor.
+22.09.2023 11:46:55.737 [pool-463-thread-1] TRACE org.jsmpp.session.PDUProcessTask - Received PDU: PDUHeader(25, 80000004, 00000000, 68100)
+00000000 00 00 00 19 80 00 00 04 00 00 00 00 00 01 0A 04
+00000010 42 42 36 44 34 37 32 42 00                     
+
+22.09.2023 11:46:55.737 [pool-463-thread-1] DEBUG o.j.session.AbstractSessionContext - Activity notified
+2023-09-22 11:46:55,737 [pool-463-thread-1] TRACE smppgateway - Confirm for message [id=2666149] command status : 0
+22.09.2023 11:46:55.738 [Thread-20] DEBUG r.b.s.m.s.OutboundMessageNotificationHandler - Status received from provider for message [id=2666149] is SENT
+22.09.2023 11:46:55.738 [Thread-20] INFO  sms - Message[id=2666149, refnum=smpp|BB6D472B] is sent, waiting report
+22.09.2023 11:46:55.745 [Thread-20] DEBUG r.b.s.m.s.MessageReDeliveryService - Attempting to add reference number for message id = '2666149', 'smpp|BB6D472B'
+22.09.2023 11:46:55.746 [Thread-20] DEBUG r.b.s.m.s.MessageReDeliveryService - No re-delivery record with message id = '2666149' exists
+22.09.2023 11:46:59.808 [Thread-831] TRACE org.jsmpp.session.SMPPSession - Read PDU from input stream: PDUHeader(194, 00000005, 00000000, 112). Submitting PDUProcessTask to executor.
+22.09.2023 11:46:59.809 [pool-463-thread-1] TRACE org.jsmpp.session.PDUProcessTask - Received PDU: PDUHeader(194, 00000005, 00000000, 112)
+00000000 00 00 00 C2 00 00 00 05 00 00 00 00 00 00 00 70
+00000010 00 01 01 39 39 36 35 30 39 33 30 38 33 30 30 00
+00000020 05 00 4B 4B 42 00 04 00 00 00 00 00 00 00 00 79
+00000030 69 64 3A 42 42 36 44 34 37 32 42 20 73 75 62 3A
+00000040 30 30 31 20 64 6C 76 72 64 3A 30 30 31 20 73 75
+00000050 62 6D 69 74 20 64 61 74 65 3A 32 33 30 39 32 32
+00000060 31 31 34 36 20 64 6F 6E 65 20 64 61 74 65 3A 32
+00000070 33 30 39 32 32 31 31 34 36 20 73 74 61 74 3A 44
+00000080 45 4C 49 56 52 44 20 65 72 72 3A 30 30 30 30 20
+00000090 74 65 78 74 3A 20 20 20 20 20 20 20 20 20 20 20
+000000A0 20 20 20 20 20 20 20 20 20 04 23 00 03 03 00 00
+000000B0 04 27 00 01 02 00 1E 00 09 42 42 36 44 34 37 32
+000000C0 42 00                                          
+
+22.09.2023 11:46:59.809 [pool-463-thread-1] DEBUG o.j.session.AbstractSessionContext - Activity notified
+22.09.2023 11:46:59.809 [pool-463-thread-1] DEBUG org.jsmpp.util.DefaultDecomposer - DefaultDecomposer.java EsmClass = 4 text = [B@21e02b71| byte lenght - 194
+22.09.2023 11:46:59.809 [pool-463-thread-1] DEBUG org.jsmpp.util.DefaultDecomposer - DefaultDecomposer.java byte =000-62000500000001120115757545348575148565148480507575660400000000121105100586666546852555066321151179858484849321001081181141005848484932115117981091051163210097116101585051485750504949525432100111110101321009711610158505148575050494952543211511697116586869767386826832101114114584848484832116101120116583232323232323232323232323232323232323232435033004390120300966665468525550660
+22.09.2023 11:46:59.809 [pool-463-thread-1] DEBUG org.jsmpp.util.DefaultDecomposer - DefaultDecomposer.java byte =�p996509308300KKByid:BB6D472B sub:001 dlvrd:001 submit date:2309221146 done date:2309221146 stat:DELIVRD err:0000 text:
+#'      BB6D472B
+2023-09-22 11:46:59,809 [pool-463-thread-1] INFO  smppgateway - Receiving message by module [ id = smpp ] : id:BB6D472B sub:001 dlvrd:001 submit date:2309221146 done date:2309221146 stat:DELIVRD err:0000 text:                     | 4
+22.09.2023 11:46:59.809 [pool-463-thread-1] TRACE org.jsmpp.DefaultPDUSender - Sending PDU:
+00000000 00 00 00 11 80 00 00 05 00 00 00 00 00 00 00 70
+00000010 00                                             
+
+22.09.2023 11:46:59.809 [pool-463-thread-1] DEBUG org.jsmpp.session.SMPPSession - deliver_sm_resp with seq_number 112 has been sent
+22.09.2023 11:46:59.809 [Thread-20] INFO  sms - Status report received. Ref.num: BB6D472B, status: DELIVERED, status code: 2, status code desc: Short message replaced by the SC(in case SMPP deliverd)
+22.09.2023 11:46:59.812 [Thread-20] INFO  sms - Identifiers for message[refnum=smpp|BB6D472B]: internalMessageId=2666063, msgId=2666149
+22.09.2023 11:46:59.812 [Thread-20] INFO  sms - Status report for message[id=2666149]: 2 - STATE_DELIVERED
+22.09.2023 11:46:59.812 [Thread-20] DEBUG r.b.s.m.s.MessageReDeliveryService - Deleting re-delivery record for message id = '2666149'
+22.09.2023 11:46:59.821 [orach-router] DEBUG ru.bpc.orach.messagebus.QueuedBus - Routing message [id=2666149]
+22.09.2023 11:46:59.828 [orach-router] DEBUG ru.bpc.orach.messagebus.QueuedBus - Route targets for message [id=2666149] are []
+22.09.2023 11:46:59.828 [orach-router] DEBUG ru.bpc.orach.messagebus.QueuedBus - Message[id=2666149] processing finished

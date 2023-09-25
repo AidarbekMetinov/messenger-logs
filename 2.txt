@@ -1,0 +1,236 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.2)
+
+2023-09-22 04:30:29.317  INFO d2c3f11e230d --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 8.0.1.Final
+2023-09-22 04:30:29.623  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8071/
+2023-09-22 04:30:29.625  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:29.639  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2023-09-22 04:30:29.639  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8071:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:29.640  WARN d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7857fe2 uris = array<String>['http://localhost:8071'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused
+2023-09-22 04:30:29.640  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8071/
+2023-09-22 04:30:29.640  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:29.640  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8071/
+2023-09-22 04:30:29.640  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:29.640  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2023-09-22 04:30:29.640  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8071:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:29.641  WARN d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6a4f1a55 uris = array<String>['http://localhost:8071'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused
+2023-09-22 04:30:29.641  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2023-09-22 04:30:29.641  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8071:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:29.645  WARN d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2584b82d uris = array<String>['http://localhost:8071'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused
+2023-09-22 04:30:30.393 ERROR d2c3f11e230d --- [           main] o.s.b.SpringApplication                  : Application run failed
+org.springframework.cloud.config.client.ConfigClientFailFastException: Could not locate PropertySource and the resource is not optional, failing
+        at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.doLoad(ConfigServerConfigDataLoader.java:189)
+        at org.springframework.cloud.config.client.ConfigClientRetryBootstrapper.lambda$initialize$1(ConfigClientRetryBootstrapper.java:54)
+        at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.load(ConfigServerConfigDataLoader.java:94)
+        at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.load(ConfigServerConfigDataLoader.java:63)
+        at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+        at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+        at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+        at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:115)
+        at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:242)
+        at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:229)
+        at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+        at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+        at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+        at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+        at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+        at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+        at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+        at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+        at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+        at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+        at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+        at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:356)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+        at com.kkb.messengercore.MessengerCoreApplication.main(MessengerCoreApplication.java:12)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+        at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+        at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+        at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+        at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8071/messenger-core/default": Connection refused
+        at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+        at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+        at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+        at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+        at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.getRemoteEnvironment(ConfigServerConfigDataLoader.java:324)
+        at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.doLoad(ConfigServerConfigDataLoader.java:121)
+        ... 37 more
+Caused by: java.net.ConnectException: Connection refused
+        at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+        at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+        at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+        at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+        at java.base/java.net.Socket.connect(Socket.java:633)
+        at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+        at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+        at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+        at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+        at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+        at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+        at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:75)
+        at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+        at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+        at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+        ... 41 more
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.2)
+
+2023-09-22 04:30:51.223  INFO d2c3f11e230d --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 8.0.1.Final
+2023-09-22 04:30:51.568  INFO d2c3f11e230d --- [           main] c.k.m.MessengerCoreApplication           : Starting MessengerCoreApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/messenger-core-0.0.1-SNAPSHOT.jar started by root in /)
+2023-09-22 04:30:51.588 DEBUG d2c3f11e230d --- [           main] c.k.m.MessengerCoreApplication           : Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-09-22 04:30:51.603  INFO d2c3f11e230d --- [           main] c.k.m.MessengerCoreApplication           : The following 1 profile is active: "default"
+2023-09-22 04:30:51.888  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8071/
+2023-09-22 04:30:51.888  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=messenger-core, profiles=[default], label=null, version=f6160b7f1b9a80fdcddc091cd45cb0dbf4965ce4, state=null
+2023-09-22 04:30:51.895  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2023-09-22 04:30:51.895  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8071:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:51.895  WARN d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7dc19a70 uris = array<String>['http://localhost:8071'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused
+2023-09-22 04:30:51.895  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8071/
+2023-09-22 04:30:51.895  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=messenger-core, profiles=[default], label=null, version=f6160b7f1b9a80fdcddc091cd45cb0dbf4965ce4, state=null
+2023-09-22 04:30:51.896  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8071/
+2023-09-22 04:30:51.896  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=messenger-core, profiles=[default], label=null, version=f6160b7f1b9a80fdcddc091cd45cb0dbf4965ce4, state=null
+2023-09-22 04:30:51.896  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2023-09-22 04:30:51.917  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8071:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:51.917  WARN d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2f67a4d3 uris = array<String>['http://localhost:8071'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused
+2023-09-22 04:30:51.917  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8071
+2023-09-22 04:30:51.917  INFO d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8071:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused. Will be trying the next url if available
+2023-09-22 04:30:51.917  WARN d2c3f11e230d --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2fb0623e uris = array<String>['http://localhost:8071'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8071/messenger-core/default": Connection refused
+2023-09-22 04:30:55.298  INFO d2c3f11e230d --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-22 04:30:55.814  INFO d2c3f11e230d --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 491 ms. Found 2 JPA repository interfaces.
+2023-09-22 04:30:56.776  INFO d2c3f11e230d --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=4c4dedb9-28af-3bd9-9dcd-c14c34ca494d
+2023-09-22 04:30:58.250  INFO d2c3f11e230d --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-09-22 04:30:58.279  INFO d2c3f11e230d --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-22 04:30:58.283  INFO d2c3f11e230d --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-09-22 04:30:58.283  INFO d2c3f11e230d --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-22 04:30:58.520  INFO d2c3f11e230d --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-09-22 04:30:58.524  INFO d2c3f11e230d --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6596 ms
+2023-09-22 04:30:59.670  INFO d2c3f11e230d --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-22 04:30:59.824  INFO d2c3f11e230d --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-09-22 04:30:59.828  INFO d2c3f11e230d --- [           main] o.h.c.Environment                        : HHH000406: Using bytecode reflection optimizer
+2023-09-22 04:31:00.563  INFO d2c3f11e230d --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-22 04:31:01.321  INFO d2c3f11e230d --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-22 04:31:01.466  INFO d2c3f11e230d --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2023-09-22 04:31:02.578  INFO d2c3f11e230d --- [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71978f46
+2023-09-22 04:31:02.581  INFO d2c3f11e230d --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2023-09-22 04:31:04.959  INFO d2c3f11e230d --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-22 04:31:09.346  INFO d2c3f11e230d --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-22 04:31:09.719  INFO d2c3f11e230d --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-22 04:31:15.781  WARN d2c3f11e230d --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-22 04:31:20.396  INFO d2c3f11e230d --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-09-22 04:31:20.781  WARN d2c3f11e230d --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's
+recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-09-22 04:31:20.797  INFO d2c3f11e230d --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-09-22 04:31:22.170  INFO d2c3f11e230d --- [           main] o.s.c.n.e.InstanceInfoFactory            : Setting initial instance status as: STARTING
+2023-09-22 04:31:22.721  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Initializing Eureka in region us-east-1
+2023-09-22 04:31:22.762  INFO d2c3f11e230d --- [           main] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2023-09-22 04:31:23.021  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Disable delta property : false
+2023-09-22 04:31:23.022  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2023-09-22 04:31:23.029  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2023-09-22 04:31:23.029  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Application is null : false
+2023-09-22 04:31:23.029  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2023-09-22 04:31:23.030  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Application version is -1: true
+2023-09-22 04:31:23.030  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2023-09-22 04:31:25.055  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : The response status is 200
+2023-09-22 04:31:25.143  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Starting heartbeat executor: renew interval is: 30
+2023-09-22 04:31:25.319  INFO d2c3f11e230d --- [           main] c.n.d.InstanceInfoReplicator             : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-09-22 04:31:25.397  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Discovery Client initialized at timestamp 1695357085371 with initial instances count: 0
+2023-09-22 04:31:25.425  INFO d2c3f11e230d --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MESSENGER-CORE with eureka with status UP
+2023-09-22 04:31:25.434  INFO d2c3f11e230d --- [           main] c.n.d.DiscoveryClient                    : Saw local status change event StatusChangeEvent [timestamp=1695357085434, current=UP, previous=STARTING]
+2023-09-22 04:31:25.441  INFO d2c3f11e230d --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_MESSENGER-CORE/d2c3f11e230d:messenger-core:8080: registering service...
+2023-09-22 04:31:25.452  INFO d2c3f11e230d --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2023-09-22 04:31:25.650  INFO d2c3f11e230d --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-22 04:31:25.652  INFO d2c3f11e230d --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2023-09-22 04:31:25.665  INFO d2c3f11e230d --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2023-09-22 04:31:25.707  INFO d2c3f11e230d --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_MESSENGER-CORE/d2c3f11e230d:messenger-core:8080 - registration status: 204
+2023-09-22 04:31:26.223  INFO d2c3f11e230d --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-22 04:31:26.224  INFO d2c3f11e230d --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-09-22 04:31:26.231  INFO d2c3f11e230d --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2023-09-22 04:31:26.370  INFO d2c3f11e230d --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#61f377d1:0/SimpleConnection@6335f04a [delegate=amqp://guest@192.168.32.4:5672/, localPort=40040]
+2023-09-22 04:31:27.666  INFO d2c3f11e230d --- [           main] c.k.m.MessengerCoreApplication           : Started MessengerCoreApplication in 46.053 seconds (process running for 53.947)
+2023-09-22 04:31:27.704 DEBUG d2c3f11e230d --- [           main] c.k.m.s.SmscConfiguration                : login:myuser password:kkb1kkb2
+2023-09-22 04:31:28.305  INFO d2c3f11e230d --- [           main] c.c.s.i.DefaultSmppServer                : SmppServer started at 0.0.0.0:8083
+2023-09-22 04:31:29.264  INFO d2c3f11e230d --- [     SmppServer] c.c.s.c.SmppServerConnector              : New channel from [10.60.10.133:13410]
+2023-09-22 04:31:29.281  INFO d2c3f11e230d --- [60.10.133:13410] c.c.s.i.UnboundSmppSession               : received PDU: (bind_transceiver: 0x00000025 0x00000009 0x00000000 0x00000001) (body: systemId [myuser] password [kkb1kkb2] systemType [] interfaceVersion [0x34] addressRange (0x01 0x00 [])) (opts: )
+2023-09-22 04:31:29.285 DEBUG d2c3f11e230d --- [60.10.133:13410] c.k.m.s.s.CustomSmppServerHandler        : sessionBindRequested
+2023-09-22 04:31:29.285 DEBUG d2c3f11e230d --- [60.10.133:13410] c.k.m.s.s.CustomSmppServerHandler        : bindSuccessful
+2023-09-22 04:31:29.298  INFO d2c3f11e230d --- [60.10.133:13410] c.c.s.i.DefaultSmppSession               : send PDU: (bind_transceiver_resp: 0x0000001A 0x80000009 0x00000000 0x00000001 result: "OK") (body: systemId [smpp]) (opts: (sc_interface_version: 0x0210 0x0001 [34]))
+2023-09-22 04:31:29.305 DEBUG d2c3f11e230d --- [60.10.133:13410] c.k.m.s.s.CustomSmppServerHandler        : sessionCreated
+2023-09-22 04:31:29.317  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (unbind: 0x00000010 0x00000006 0x00000000 0x00000002) (body: ) (opts: )
+2023-09-22 04:31:29.318 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:31:55.132  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Disable delta property : false
+2023-09-22 04:31:55.133  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2023-09-22 04:31:55.134  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2023-09-22 04:31:55.134  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application is null : false
+2023-09-22 04:31:55.134  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2023-09-22 04:31:55.134  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application version is -1: false
+2023-09-22 04:31:55.134  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2023-09-22 04:31:55.160  INFO d2c3f11e230d --- [freshExecutor-0] c.n.d.DiscoveryClient                    : The response status is 200
+2023-09-22 04:32:29.367  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (enquire_link: 0x00000010 0x00000015 0x00000000 0x00000003) (body: ) (opts: )
+2023-09-22 04:32:29.367 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:32:29.368 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : Received EnquireLink request
+2023-09-22 04:32:29.368  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : send PDU: (enquire_link_resp: 0x00000010 0x80000015 0x00000000 0x00000003 result: "OK") (body: ) (opts: )
+2023-09-22 04:33:29.322 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppServerHandler        : sessionDestroyed
+2023-09-22 04:33:29.322 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : fireChannelUnexpectedlyClosed
+2023-09-22 04:33:29.323  INFO d2c3f11e230d --- [     SmppServer] c.c.s.c.SmppServerConnector              : New channel from [10.60.10.133:13717]
+2023-09-22 04:33:29.324  INFO d2c3f11e230d --- [60.10.133:13717] c.c.s.i.UnboundSmppSession               : received PDU: (bind_transceiver: 0x00000025 0x00000009 0x00000000 0x00000001) (body: systemId [myuser] password [kkb1kkb2] systemType [] interfaceVersion [0x34] addressRange (0x01 0x00 [])) (opts: )
+2023-09-22 04:33:29.325 DEBUG d2c3f11e230d --- [60.10.133:13717] c.k.m.s.s.CustomSmppServerHandler        : sessionBindRequested
+2023-09-22 04:33:29.325 DEBUG d2c3f11e230d --- [60.10.133:13717] c.k.m.s.s.CustomSmppServerHandler        : bindSuccessful
+2023-09-22 04:33:29.326  INFO d2c3f11e230d --- [60.10.133:13717] c.c.s.i.DefaultSmppSession               : send PDU: (bind_transceiver_resp: 0x0000001A 0x80000009 0x00000000 0x00000001 result: "OK") (body: systemId [smpp]) (opts: (sc_interface_version: 0x0210 0x0001 [34]))
+2023-09-22 04:33:29.327 DEBUG d2c3f11e230d --- [60.10.133:13717] c.k.m.s.s.CustomSmppServerHandler        : sessionCreated
+2023-09-22 04:34:29.369  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (enquire_link: 0x00000010 0x00000015 0x00000000 0x00000002) (body: ) (opts: )
+2023-09-22 04:34:29.369 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:34:29.369 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : Received EnquireLink request
+2023-09-22 04:34:29.370  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : send PDU: (enquire_link_resp: 0x00000010 0x80000015 0x00000000 0x00000002 result: "OK") (body: ) (opts: )
+2023-09-22 04:35:29.433  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (enquire_link: 0x00000010 0x00000015 0x00000000 0x00000003) (body: ) (opts: )
+2023-09-22 04:35:29.433 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:35:29.433 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : Received EnquireLink request
+2023-09-22 04:35:29.434  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : send PDU: (enquire_link_resp: 0x00000010 0x80000015 0x00000000 0x00000003 result: "OK") (body: ) (opts: )
+2023-09-22 04:36:10.318  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (submit_sm: 0x0000005D 0x00000004 0x00000000 0x00000001) (body: (serviceType [] sourceAddr [0x01 0x01 [KKB]] destAddr [0x01 0x01 [996220612407]] esmCls [0x00] regDlvry [0x01] dcs [0x00] message [32322E30392E323032332031303A33343A3531202D205465737420534D53204D6963726F736572766963657321])) (opts: )
+2023-09-22 04:36:10.318 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:36:10.319 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : Received SubmitSM request from KKB to 996220612407: 22.09.2023 10:34:51 - Test SMS Microservices!
+2023-09-22 04:36:10.324 DEBUG d2c3f11e230d --- [pool-4-thread-1] c.k.m.s.i.ClientServiceImpl              : Requesting notification type for client:996220612407
+2023-09-22 04:36:10.327  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : send PDU: (submit_sm_resp: 0x00000019 0x80000004 0x00000000 0x00000001 result: "OK") (body: (messageId [4WNmXErc])) (opts: )
+2023-09-22 04:36:10.897 DEBUG d2c3f11e230d --- [pool-4-thread-1] c.k.m.s.Messenger                        : Saving message request with id:4WNmXErc
+2023-09-22 04:36:10.992 DEBUG d2c3f11e230d --- [pool-4-thread-1] c.k.m.s.i.MessengerDefaultImpl           : Sending message request with id:4WNmXErc to rabbit message-request.queue
+2023-09-22 04:36:11.328 DEBUG d2c3f11e230d --- [pool-3-thread-1] c.k.m.s.u.SmppScheduledExecutor          : deliverSm
+2023-09-22 04:36:11.330  INFO d2c3f11e230d --- [pool-3-thread-1] c.c.s.i.DefaultSmppSession               : async send PDU: (deliver_sm: 0x00000095 0x00000005 0x00000000 0x00000001) (body: (serviceType [] sourceAddr [0x01 0x01 [996220612407]] destAddr [0x01 0x01 [KKB]] esmCls [0x00] regDlvry [0x00] dcs [0x00] message [69643A34574E6D58457263207375623A30303120646C7672643A303031207375626D697420646174653A3233303932323034333620646F6E6520646174653A3233303932323034333620737461743A44454C49565244206572723A3030303020746578743A])) (opts: )
+2023-09-22 04:36:11.338  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (deliver_sm_resp: 0x00000011 0x80000005 0x00000000 0x00000001 result: "OK") (body: (messageId [])) (opts: )
+2023-09-22 04:36:11.340 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : fireExpectedPduResponseReceived
+2023-09-22 04:36:11.568 DEBUG d2c3f11e230d --- [ntContainer#1-1] c.k.m.s.i.MyRabbitListenerImpl           : Processing message response with id:4WNmXErc from rabbit message-response.queue
+2023-09-22 04:36:11.581 DEBUG d2c3f11e230d --- [ntContainer#1-1] c.k.m.s.i.MyRabbitListenerImpl           : Saving status for message id:4WNmXErc
+2023-09-22 04:36:23.048  INFO d2c3f11e230d --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2023-09-22 04:36:26.642 DEBUG d2c3f11e230d --- [ntContainer#0-1] c.k.m.s.i.MyRabbitListenerImpl           : Processing delivery report for message id:4WNmXErc from rabbit delivery-report-response.queue
+2023-09-22 04:36:26.650 DEBUG d2c3f11e230d --- [ntContainer#0-1] c.k.m.s.i.MyRabbitListenerImpl           : Saving delivery report for message id:4WNmXErc
+2023-09-22 04:37:11.394  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (enquire_link: 0x00000010 0x00000015 0x00000000 0x00000004) (body: ) (opts: )
+2023-09-22 04:37:11.395 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:37:11.395 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : Received EnquireLink request
+2023-09-22 04:37:11.395  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : send PDU: (enquire_link_resp: 0x00000010 0x80000015 0x00000000 0x00000004 result: "OK") (body: ) (opts: )
+2023-09-22 04:38:11.451  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : received PDU: (enquire_link: 0x00000010 0x00000015 0x00000000 0x00000005) (body: ) (opts: )
+2023-09-22 04:38:11.451 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : firePduRequestReceived
+2023-09-22 04:38:11.451 DEBUG d2c3f11e230d --- [Session.myuser.] c.k.m.s.s.CustomSmppSessionHandler       : Received EnquireLink request
+2023-09-22 04:38:11.451  INFO d2c3f11e230d --- [Session.myuser.] c.c.s.i.DefaultSmppSession               : send PDU: (enquire_link_resp: 0x00000010 0x80000015 0x00000000 0x00000005 result: "OK") (body: ) (opts: )
